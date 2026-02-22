@@ -1,11 +1,16 @@
 
 import React from 'react';
-import { View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
+import { BottomTabNavigator } from './presentation/navigators';
 
 export const Main = () => {
   return (
-    <View>
-      <Text>Main</Text>
-    </View>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <BottomTabNavigator />
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 };
